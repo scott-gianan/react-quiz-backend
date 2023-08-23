@@ -1,7 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import { QuizItem } from "./models/quizModel.js";
-const cors = require("cors");
+import cors from "cors";
 const app = express();
 const PORT = 3000;
 
@@ -9,6 +9,7 @@ const PORT = 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
+console.log(cors);
 //routes
 app.get("/", (request, response) => {
   response.send("Hello Node API");
