@@ -1,6 +1,7 @@
 import express from "express";
 import mongoose from "mongoose";
 import { QuizItem } from "./models/quizModel.js";
+const cors = require("cors");
 const app = express();
 const PORT = 3000;
 
