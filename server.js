@@ -6,6 +6,8 @@ const PORT = 3000;
 
 //middleware
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cors());
 //routes
 app.get("/", (request, response) => {
   response.send("Hello Node API");
